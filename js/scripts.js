@@ -4,27 +4,28 @@ var getList = document.getElementById('lista');
 var newElem = document.createElement('li');
 
 //opcja 1
-// addElem.addEventListener('click', function() {
+// addBtn.addEventListener('click', function() {
 // 	itemNumber += 1;
 // 	getList.innerHTML += '<li>item ' + itemNumber + '</li>';
 // })
 
 //opcja 2
-var itemLength = getList.getElementsByTagName('li');
+// var itemLength = getList.getElementsByTagName('li');
 
-addElem.addEventListener('click', function() {
-	getList.innerHTML += '<li>item ' + itemLength.length + '</li>';
-})
+// addBtn.addEventListener('click', function() {
+// 	getList.innerHTML += '<li>item ' + itemLength.length + '</li>';
+// })
 
 
 //opcja 3
-// addElem.addEventListener('click', function() {
-// 	itemNumber += 1;
-// 	newElem.innerHTML = 'item ' + itemNumber;
-// 	getList.appendChild(newElem);
-// })
+addBtn.addEventListener('click', function() {
+	itemNumber += 1;
+	var newElem = document.createElement('li'); //dlaczego bez tego nie działa, skoro newElem był zdefiniowany na poczatku?
+	newElem.innerHTML = 'item ' + itemNumber;
+	getList.appendChild(newElem);
+})
 
-//??Dlaczego po kliknięciu nie wykonuje się dodatkowy appendChild?
+
 
 
 
